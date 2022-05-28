@@ -1,0 +1,14 @@
+<h1>Home</h1>
+
+<p>[<a href="/home">home</a>]</p>
+<p>[<a href="/create">create</a>]</p>
+
+<h2>Posts</h2>
+
+{{ range .Body }}
+<p><a href="/view/{{ . }}">{{ . }}</a></p>
+{{ end }}
+
+{{ if not .Body }}
+<p>No Content</p>
+{{ end }}
